@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abu Talha Portfolio
 
-## Getting Started
+This portfolio is built with Next.js App Router, TypeScript, Tailwind CSS, and a minimalist editorial design inspired by premium developer portfolios. The content is sourced from the résumé in `public/documents/resume.pdf` and the hero asset in `public/hero/intro.mp4`.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/page.tsx` - Portfolio page layout and sections
+- `app/layout.tsx` - App metadata and global wrapper
+- `app/globals.css` - Tailwind import and global theme styles
+- `src/lib/data.ts` - Centralized portfolio content
+- `src/components/Navigation.tsx` - Responsive navigation
+- `src/components/HeroVideo.tsx` - Video hero with sound toggle and viewport pause logic
+- `src/components/ProjectCard.tsx` - Project card UI
+- `src/components/SectionHeading.tsx` - Reusable section header
+- `src/components/Buttons.tsx` - Action buttons and links
+- `src/components/Reveal.tsx` - Reveal-on-scroll animation
+- `public/documents/resume.pdf` - Resume download source
+- `public/hero/intro.mp4` - Hero video asset
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- No public project deployment URLs were verified in the résumé, so project cards do not claim live deployment links.
+- The portfolio intentionally omits an achievements section because the résumé does not include verified achievements.
