@@ -50,7 +50,6 @@ export function HeroVideo() {
 
         const nextMuted = !muted;
         setMuted(nextMuted);
-        setUserMuted(nextMuted);
         video.muted = nextMuted;
 
         if (nextMuted) {
